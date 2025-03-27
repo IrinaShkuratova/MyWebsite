@@ -1,0 +1,196 @@
+@font-face {
+    font-family: 'Arkiv Bond';
+    src: url('fonts/ArkivBond.woff2') format('woff2'),
+         url('fonts/ArkivBond.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arkiv Bond', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+.header {
+    position: relative;
+    background: url('images/logo-white.png') no-repeat center center/cover;
+    height: 500px;
+    clip-path: polygon(0% 0%, 0% 80%, 25% 100%, 100% 50%, 100% 0%, 25% 30%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.header-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 250px;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hexagon {
+    display: inline-block;
+    width: 140px;
+    height: 140px;
+    background: #007acc;
+    color: white;
+    text-align: center;
+    line-height: 140px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    transition: 0.3s;
+}
+
+.hexagon:hover {
+    background: #005999;
+}
+
+.section {
+    display: none;
+    padding: 20px;
+    background: #ddd;
+    margin-top: 10px;
+    text-align: left;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.footer-top .reports {
+    background: #42ad99;
+    color: white;
+    padding: 25px 200px;
+    font-weight: bold;
+    font-size: 28px;
+    transition: 0.3s;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 90px;
+}
+
+.footer-top .report-main {
+    clip-path: polygon(0% 0%, 86% 0%, 100% 50%, 86% 100%, 0% 100%);
+}
+
+.footer-top .report-2024 {
+    clip-path: polygon(19% 50%, 0% 0%, 81% 0%, 100% 50%, 81% 100%, 0% 100%);
+}
+
+.footer-top .report-2025 {
+    clip-path: polygon(19% 50%, 0% 0%, 81% 0%, 100% 50%, 81% 100%, 0% 100%);
+}
+
+.footer-top .report-2026 {
+    clip-path: polygon(19% 50%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.footer-top span:hover {
+    background: #27ae60;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    padding: 45px 20px;
+    position: relative;
+}
+
+.color-blocks {
+    display: flex;
+    gap: 5px;
+    align-items: flex-end;
+    flex-grow: 1;
+    justify-content: flex-start;
+    margin-right: 1px;
+}
+
+.color-block {
+    width: 123px;
+    height: 14px;
+}
+
+.pink { background-color: #ff1493; }
+.green { background-color: #2ecc71; }
+.blue { background-color: #007acc; }
+
+.social-icons {
+    display: flex;
+    gap: 13px;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 0;
+    margin-left: 1px;
+}
+
+.social-icons img {
+    width: 35px;
+    cursor: pointer;
+    vertical-align: bottom;
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    margin-top: 35px;
+    margin-bottom: 0px;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    padding: 15px 180px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.contact-phone {
+    background: #ff2c97;
+    padding: 11px 285px;
+    clip-path: polygon(0% 0%, 86% 0%, 100% 50%, 86% 100%, 0% 100%);
+}
+
+.contact-email {
+    background: #005999;
+    padding: 20px 457px;
+    clip-path: polygon(19% 50%, 0% 0%, 100% 0%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.contact-box img {
+    width: 36px;
+    align-self: center;
+    margin-right: 10px;
+}

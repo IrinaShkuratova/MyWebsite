@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фонд Развития Творческих Технологий</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="header">
+        <div class="header-overlay">
+            <alt="Фонд Развития Творческих Технологий" class="logo">
+        </div>
+        <div class="nav">
+            <div class="hexagon" onclick="toggleSection('about')">О Фонде</div>
+            <div class="hexagon" onclick="toggleSection('projects')">Проекты</div>
+            <div class="hexagon" onclick="toggleSection('exhibitions')">Выставки</div>
+            <div class="hexagon" onclick="toggleSection('donate')">Donate</div>
+        </div>
+    </div>
+    <div class="content">
+        <div id="about" class="section">Информация о фонде...</div>
+        <div id="projects" class="section">Описание проектов...</div>
+        <div id="exhibitions" class="section">Выставки фонда...</div>
+        <div id="donate" class="section">Как поддержать...</div>
+    </div>
+    <div class="contacts">
+        <div class="contact-info">
+            <div class="contact-box contact-phone">
+                <img src="images/phone-icon.png" alt="Телефон">
+                <span>8 900 275 8888</span>
+            </div>
+            <div class="contact-box contact-email">
+                <span>e-mail: morozkinaelena@mail.ru</span>
+	    </div>
+         </div>
+    </div>
+    <div class="footer">
+        <div class="footer-top">
+            <span class="reports report-main" onclick="toggleSection('report2024')">ОТЧЁТЫ</span>
+            <span class="reports report-2024" onclick="toggleSection('report2024')">2024</span>
+            <span class="reports report-2025" onclick="toggleSection('report2025')">2025</span>
+            <span class="reports report-2026" onclick="toggleSection('report2026')">2026</span>
+        </div>
+        <div id="report2024" class="section">Отчёт за 2024 год...</div>
+        <div id="report2025" class="section">Отчёт за 2025 год...</div>
+        <div id="report2026" class="section">Отчёт за 2026 год...</div>
+        <div class="footer-bottom">
+            <div class="color-blocks">
+                <div class="color-block pink"></div>
+                <div class="color-block green"></div>
+                <div class="color-block blue"></div>
+                <div class="color-block pink"></div>
+                <div class="color-block green"></div>
+                <div class="color-block blue"></div>
+                <div class="color-block pink"></div>
+                <div class="color-block green"></div>
+                <div class="color-block blue"></div>
+                <div class="color-block pink"></div>
+                <div class="color-block green"></div>
+                <div class="color-block blue"></div>
+                <div class="color-block pink"></div>
+            </div>
+            <div class="social-icons">
+                <a href="https://t.me/morozkinaelena" target="_blank"><img src="images/telegram.png" alt="Телеграм"></a>
+                <a href="https://vk.com/creativetechnologyfund" target="_blank"><img src="images/vk.png" alt="ВКонтакте"></a>
+                <a href="https://rutube.ru/channel/56259363"><img src="images/rutube.png" alt="Rutube"></a>
+                <a href="https://dzen.ru/id/67d3207a928dec58ad1a04f5"><img src="images/dzen.png" alt="Дзен"></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
