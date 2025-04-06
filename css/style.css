@@ -1,0 +1,649 @@
+@font-face {
+  font-family: 'Arkiv Bond';
+  src: url('fonts/ArkivBond.woff2') format('woff2'),
+       url('fonts/ArkivBond.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Сброс стилей (можно использовать normalize.css или reset.css) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Базовые стили */
+body {
+  font-family: 'Arkiv Bond', sans-serif;
+  color: #fff;
+  line-height: 1.4;
+}
+
+/* Контейнер для центрирования содержимого */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding 20px;
+}
+
+/* Шапка */
+.site-header {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.logo img {
+  max-height: 60px; /* Пример */
+  height: auto;
+  width: auto;
+}
+
+.logo-and-info {
+  position: absolute;  /* Накладываем поверх фона */
+  top: 50px;           /* координаты */
+  left: 50px;          /* Или right: 50px; — зависит от макета */
+  z-index: 10;         /* Поверх .hero-overlay (если нужно) */
+  color: #fff;         /* Цвет текста, если фон позади тёмный/яркий */
+}
+
+/* Сам логотип */
+.firm-logo {
+  max-width: 200px; /* Подберите под макет */
+  height: auto;
+  margin-bottom: 1rem; /* Отступ снизу */
+  position: absolute;
+  top: 130px;
+  left: 100px;
+  transform: scale(2.3);
+}
+
+/* Контейнер для трёх прямоугольников */
+.info-rectangles {
+  display: flex;       /* Выстраиваем в ряд */
+  gap: 1rem;           /* Расстояние между ними */
+  transform: translate(15px, 310px);
+}
+
+/* Оформление каждого прямоугольника */
+.rectangle {
+  width: 110px;       
+  height: 15px;
+  background-color: #fff; /* Белый фон */
+  color: #333;         /* Тёмный текст на белом фоне */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase; /* Пример заглавными */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Лёгкая тень */
+}
+
+/* Прямоугольники в разные цвета */
+.rect1 {
+  background-color: #ff5c5c; /* Пример: красный */
+}
+
+.rect2 {
+  background-color: #00bfa5; /* Пример: бирюзовый */
+}
+
+.rect3 {
+  background-color: #21439c; /* Пример: синий */
+}
+
+/* Текст под прямоугольниками */
+.rectangle-text {
+  font-size: 1rem; /* размер */
+  /* Цвет — если фон позади яркий, а текст нужен белый: */
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  margin-top: 320px;
+}
+
+.donate-triangle {
+  position: absolute;        /* позволяет разместить в нужном месте */
+  top: 210px;                /* по вертикали */
+  right: 0;               /* по горизонтали */
+  
+  width: 300px;              /* Ширина треугольника */
+  height: 300px;              /* Высота треугольника */
+  background-color: #42ad99; /* Цвет фона, подберите под макет */
+  
+  /* Создаём треугольник с помощью clip-path */
+  clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  
+  /* Стили текста */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;     /* Убираем подчеркивание у ссылки */
+  text-transform: uppercase; /* По желанию */
+  font-size: 2rem;
+  justify-content: flex-end;
+  padding-right: 47px;
+}
+
+/* Блок баннера */
+.hero {
+  min-height: 400px;
+  height: 80vh; /* Примерная высота */
+  background: url("../images/banner.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-overlay h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* Раздел с шестиугольными кнопками (упрощённо) */
+.hex-section {
+  background: #fff;
+  padding: 2rem 0;
+}
+
+.hex-cards a:nth-child(1) {
+  margin-top: -250px;    /* Отступ сверху для первого элемента */
+  margin-left: 293px;   /* Сдвиг вправо для первого элемента */
+  background-color: #42ad99;
+}
+
+.hex-cards a:nth-child(2) {
+  margin-top: -300px;    /* Отступ сверху для второго элемента */
+  margin-left: 605px;      /* Никакого сдвига для второго элемента */
+  background-color: #fc2a95;
+}
+
+.hex-cards a:nth-child(3) {
+  margin-top: -315px;    /* Отступ сверху для третьего элемента */
+  margin-left: 917px;  /* Сдвиг влево для третьего элемента */ 
+  background-color: #21439c;
+}
+
+
+.clipped-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  clip-path: polygon(0 14%, 0 69%, 20% 90%, 29.50% 83%, 29.50% 67.80%, 35.20% 59.50%, 40.60% 67%, 50.10% 60%, 50.10% 45%, 55.80% 37.20%, 61.20% 45%, 70.80% 36%, 70.80% 20%, 76.40% 12.50%, 81.80% 19.80%, 100% 19.80%, 100% 0%, 64% 0, 20% 31%);
+}
+
+.hex-card {
+  display: block;
+  width: 165px;
+  height: 165px;
+  background-color: #ff5c5c;
+  color: #fff;
+  text-align: center;
+  line-height: 165px;
+  text-decoration: none;
+  font-weight: bold;
+  /* Для настоящего шестиугольника нужен псевдоэлемент и clip-path, но здесь – упрощённо */
+  clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+  transition: background-color 0.3s ease;
+}
+
+.hex-card:hover {
+  background-color: #e64a4a;
+}
+
+.search-btn {
+  position: absolute;   /* Чтобы расположить в нужном месте */
+  top: 20px;            /* координаты по макету */
+  right: 20px;          /* координаты по макету */
+  background: none;     /* фон у кнопки */
+  border: none;         /* рамку */
+  cursor: pointer;      /* Курсор «рука» при наведении */
+  z-index: 999;         /* Чтобы быть поверх других элементов */
+}
+
+.search-btn img {
+  width: 80px;   /* Размер иконки */
+  height: 50px;  /* Можно не указывать, если пропорции сохранены */
+}
+
+/* Галерея */
+.gallery {
+  padding: 2rem 0;
+  margin-top: -110px;
+}
+
+.gallery-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  flex: 1 1 calc(33.333% - 1rem);
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.img-gallery-1 {
+  width: 500px;
+  height: 400px;
+}
+
+.img-gallery-2 {
+  width: 250px;
+  height: 400px;
+}
+
+/* Контакты */
+.contacts {
+  background-color: #f0f0f0;
+  padding: 1rem 0;
+}
+
+.contacts-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contacts-content p {
+  margin: 0.5rem 0;
+}
+
+.blue-shape {
+  position: absolute;
+  /* Расположение – подберите по макету. Пример: */
+  top: 0;
+  left: 0;
+  /* Размеры – задайте нужные размеры в пикселях или процентах */
+  width: 1560px;
+  height: 580px;
+  background-color: #21439c;
+  clip-path: polygon(0 0, 59% 0, 19.4% 29%, 0 11.5%);
+  z-index: 5; /* Чтобы фигура располагалась поверх фонового изображения, но ниже оверлея */
+}
+
+.clipped-image {
+  position: relative;
+  width: 100%;
+  height: 600px; /* или другая нужная высота */
+  overflow: hidden;
+}
+
+/*********
+  Общие стили для верхней секции (телефон + e-mail)
+*********/
+.contacts-bar {
+  width: 100%;
+  background: #fff; /* или другой цвет задника */
+}
+
+.contacts-row {
+  display: flex;
+  /* Чтобы элементы стояли в одну строку */
+  /* Можно добавить justify-content: space-between; если нужно разнести */
+}
+
+/* Общие стили для элементов в contacts-bar */
+.contacts-item {
+  font-size: 1.5rem;
+  position: relative;
+  flex: 1;                 /* Чтобы розовый и синий блоки равномерно растянулись */
+  color: #fff;             /* Текст белый */
+  display: flex;           /* Центрируем содержимое по вертикали и горизонтали */
+  align-items: center;
+  justify-content: center;
+  height: 85px;            /* Высота блока */
+  font-weight: bold;
+}
+
+/* Иконка внутри блока (телефон) */
+.contacts-icon {
+  width: 30px;  /* Подберите размер иконки */
+  height: auto;
+  margin-right: 0.5rem; /* Отступ между иконкой и текстом */
+}
+
+/* Розовый блок (телефон) */
+.phone-item {
+  background-color: #fc2a95; /* Пример розового */
+  /* Пример clip-path (трапеция, «косой» край справа) */
+  clip-path: polygon(95% 0, 100% 50%, 95% 100%, 0 100%, 0 0);
+}
+
+/* Синий блок (e-mail) */
+.email-item {
+  background-color: #23429b; /* Пример синего */
+  /* Пример clip-path (трапеция, «косой» край слева) */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 5% 50%);
+}
+
+/*********
+  Нижняя секция (ОТЧЁТЫ, 2024, 2025, 2026)
+*********/
+.reports-bar {
+  width: 100%;
+  background: #fff; /* Цвет задника, если нужен */
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.reports-row {
+  display: flex;
+  /* Можно добавить justify-content: center; или space-between */
+}
+
+.report-item {
+  font-size: 1.5rem;
+  position: relative;
+  flex: 1;             /* Чтобы все 4 блока делили строку поровну */
+  text-align: center;
+  text-decoration: none;  /* подчеркивание */
+  color: #fff;            /* Текст белый */
+  font-weight: bold;
+  text-transform: uppercase; /* Опционально */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;           /* Высота блока */
+}
+
+/* Если нужно разным блокам разные цвета, можно сделать :nth-child() */
+.reports-row a:nth-child(1) {
+  background-color: #42ad99; /* Пример зелёного */
+  /* Пример clip-path (стрелка вправо) */
+  clip-path: polygon(90% 0, 100% 50%, 90% 100%, 0 100%, 0 0);
+}
+.reports-row a:nth-child(2) {
+  background-color: #42ad99; /* Пример голубого */
+  /* Пример clip-path (стрелка вправо) */
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%);
+}
+.reports-row a:nth-child(3) {
+  background-color: #42ad99; /* Пример розового */
+  /* Пример clip-path (стрелка вправо) */
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%, 10% 50%);
+}
+.reports-row a:nth-child(4) {
+  background-color: #42ad99; /* Пример синего */
+  /* Пример clip-path (стрелка вправо) */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 10% 50%);
+}
+
+/* Контейнер для секции соцсетей */
+.social-container {
+  width: 100%;
+  margin: 0;      /* убираем авто-отступы */
+  padding: 0;     /* можно добавить padding, если нужно по макету */
+  display: flex;
+  justify-content: space-between;  /* или другое выравнивание, как нужно по макету */
+  align-items: center;
+  gap: 40px;
+}
+
+/* Блок прямоугольников */
+.footer-rectangles {
+  display: flex;
+  gap: 10px; /* Расстояние между прямоугольниками */
+}
+
+/* Общие стили для прямоугольников */
+.footer-rectangle {
+  /* Для базового примера зададим фиксированные размеры – подгоняйте под макет */
+  width: 80px;
+  height: 40px;
+}
+
+/* Прямоугольники разного цвета и размера */
+/* Первый прямоугольник */
+.footer-rectangle.rect1 {
+  background-color: #f72b8c; /* Пример розового цвета */
+  width: 111px;  /* При необходимости можно изменить ширину */
+  height: 13px; /* И высоту */
+}
+
+/* Второй прямоугольник */
+.footer-rectangle.rect2 {
+  background-color: #21439c; /* Пример синего цвета */
+  width: 111px; /* Другой размер */
+  height: 13px;
+}
+
+.footer-rectangle.rect3 {
+  background-color: #21439c; /* Пример синего цвета */
+  width: 111px; /* Другой размер */
+  height: 13px;
+}
+
+/* Стили для блока с иконками соцсетей */
+.social-links {
+  display: flex;
+  gap: 15px; /* Расстояние между иконками */
+}
+
+.social-links a {
+  display: inline-block;
+  width: 24px; /* Размер иконок – подберите под макет */
+  height: 24px;
+}
+
+.social-links img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Стили модального окна (скрыто по умолчанию) */
+.modal {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6); /* затемнение фона */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Когда модальное окно открыто */
+.modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#modal-text {
+  white-space: pre-wrap;
+}
+
+/* Содержимое модального окна */
+.modal-content {
+  background-color: #fff;
+  color: #333;
+  margin: 10% auto;
+  padding: 2rem;
+  border: 2px solid #21439c; /* рамка, подберите цвет под макет */
+  max-width: 600px;
+  position: relative;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: slideDown 0.3s ease;
+}
+
+/* Анимация появления */
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Кнопка закрытия */
+.modal-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #21439c;
+}
+
+/** Media Queries **/
+
+/* Для экранов до 1200px */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px;
+  }
+  .hero {
+    height: 70vh; /* Немного уменьшаем высоту шапки */
+  }
+  /* Если нужно, уменьшите размеры некоторых элементов, например, логотипа */
+  .firm-logo {
+    max-width: 180px;
+  }
+}
+
+/* Для экранов до 992px */
+@media (max-width: 992px) {
+  .container {
+    max-width: 750px;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem 0;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  .hero {
+    height: 60vh;
+  }
+  .firm-logo {
+    max-height: 50px;
+  }
+  /* Возможно, для секций с шестиугольниками, если они расположены в ряд, можно перейти в колонку */
+  .hex-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+/* Для экранов до 768px */
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  .header-content {
+    padding: 0.5rem 0;
+  }
+  .main-nav ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero {
+    height: auto;
+    min-height: 300px; /* Гарантирует минимальную высоту */
+  }
+  /* Перестраиваем галерею и проекты в колонку */
+  .gallery-row,
+  .projects-grid {
+    flex-direction: column;
+  }
+  /* Уменьшаем отступы для шестиугольников */
+  .hex-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  /* Подкорректируйте трансформацию или позиционирование в .logo-and-info, если требуется */
+}
+
+/* Для экранов до 576px */
+@media (max-width: 576px) {
+  .hero-overlay h1 {
+    font-size: 1.5rem;
+  }
+  .hero-overlay p {
+    font-size: 1rem;
+  }
+  .firm-logo {
+    max-height: 40px;
+  }
+  .header-content {
+    padding: 0.5rem;
+  }
+  .main-nav ul {
+    gap: 0.3rem;
+  }
+  .donate-triangle {
+    font-size: 1.5rem;
+    width: 250px;
+    height: 250px;
+    padding-right: 20px;
+    top: 180px; /* Подберите оптимальное значение для мобильных */
+  }
+  /* Если есть изображения в галерее или проектах – можно уменьшить их размеры */
+  .img-gallery-1 {
+    width: 100%;
+    height: auto;
+  }
+  .img-gallery-2 {
+    width: 100%;
+    height: auto;
+  }
+  /* Также можно уменьшить размер прямоугольников и изменить gap в секциях контактов и отчетов */
+  .contacts-item {
+    font-size: 1.2rem;
+    height: 70px;
+  }
+  .reports-row a {
+    font-size: 1.2rem;
+    height: 50px;
+  }
+  /* Социальная секция – если нужно, можно уменьшить gap между иконками */
+  .social-links a {
+    width: 20px;
+    height: 20px;
+  }
+}

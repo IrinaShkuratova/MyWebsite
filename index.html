@@ -1,74 +1,143 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Фонд Развития Творческих Технологий</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Фонд Развития Творческих Технологий</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <div class="header">
-        <div class="header-overlay">
-            <alt="Фонд Развития Творческих Технологий" class="logo">
-        </div>
-        <div class="nav">
-            <div class="hexagon" onclick="toggleSection('about')">О Фонде</div>
-            <div class="hexagon" onclick="toggleSection('projects')">Проекты</div>
-            <div class="hexagon" onclick="toggleSection('exhibitions')">Выставки</div>
-            <div class="hexagon" onclick="toggleSection('donate')">Donate</div>
-        </div>
+
+  <!-- Шапка (header) сайта -->
+  <header class="hero" id="hero">
+    <!-- Обёртка для фонового изображения с эффектом clip-path -->
+    <div class="clipped-image">
+      <img src="images/logo-white.png" alt="Фоновое изображение">
     </div>
-    <div class="content">
-        <div id="about" class="section">Информация о фонде...</div>
-        <div id="projects" class="section">Описание проектов...</div>
-        <div id="exhibitions" class="section">Выставки фонда...</div>
-        <div id="donate" class="section">Как поддержать...</div>
+    <div class="blue-shape"></div>
+    <div class="hero-overlay">
+      <h1></h1>
+      <p></p>
     </div>
-    <div class="contacts">
-        <div class="contact-info">
-            <div class="contact-box contact-phone">
-                <img src="images/phone-icon.png" alt="Телефон">
-                <span>8 900 275 8888</span>
-            </div>
-            <div class="contact-box contact-email">
-                <span>e-mail: morozkinaelena@mail.ru</span>
-	    </div>
-         </div>
+
+    <div class="logo-and-info">
+    <!-- Логотип фирмы -->
+      <img src="images/logo.png" alt="Логотип" class="firm-logo" />
+
+      <!-- Три прямоугольника -->
+      <div class="info-rectangles">
+        <div class="rectangle rect1"></div>
+        <div class="rectangle rect2"></div>
+        <div class="rectangle rect3"></div>
+      </div>
+
+    <!-- Подпись под прямоугольниками -->
+    <p class="rectangle-text">ПРОЕКТЫ, ОБРАЗОВАНИЕ, ФЕСТИВАЛИ.<br>КОНКУРСЫ ИСКУССТВ, ВЫСТАВКИ</p>
     </div>
-    <div class="footer">
-        <div class="footer-top">
-            <span class="reports report-main" onclick="toggleSection('report2024')">ОТЧЁТЫ</span>
-            <span class="reports report-2024" onclick="toggleSection('report2024')">2024</span>
-            <span class="reports report-2025" onclick="toggleSection('report2025')">2025</span>
-            <span class="reports report-2026" onclick="toggleSection('report2026')">2026</span>
+    
+    <!-- Треугольная кнопка Donate -->
+    <a href="#" class="donate-triangle modal-btn" data-title="Реквизиты для пополнения счета" data-text="Получатель:\nАО «Тинькофф Банк»\n\nНомер счета:\n30232810100000000004\n\nНазначение платежа:\nПеревод средств по договору № 0184814782 Морозкина\nЕлена Анатольевна НДС не облагается\n\nБИК:\n044525974\n\nБанк-получатель:\nАО «Тинькофф Банк»\nКорр. счет:\n30101810145250000974\n\nИНН при необходимости:\n7710140679\n\nКПП при необходимости:\n771301001">Donate</a>
+
+    <!-- Кнопка поиска с иконкой лупы -->
+    <button class="search-btn" aria-label="Поиск">
+      <img src="images/icon-search.png" alt="Поиск" />
+    </button>
+  </header>
+
+  <!-- Раздел с кнопками-ссылками (шестиугольники или что-то подобное) -->
+  <section class="hex-section">
+    <div class="container hex-cards">
+      <a href="#" class="hex-card modal-btn" data-title="Проекты" data-text="Тут должна быть информации про проекты">ПРОЕКТЫ</a>
+      <a href="#" class="hex-card modal-btn" data-title="Выставки" data-text="Тут должна быть информации про выставки">ВЫСТАВКИ</a>
+      <a href="#" class="hex-card modal-btn" data-title="О фонде" data-text="Тут должна быть информации про фонд">О ФОНДЕ</a>
+    </div>
+  </section>
+
+  <!-- Раздел галереи/выставок -->
+  <section class="gallery" id="exhibitions">
+    <div class="container">
+      <h2>Выставки</h2>
+      <div class="gallery-row">
+        <div class="gallery-item">
+          <img src="images/gallery1.jpg" alt="Фотография выставки 1" class="img-gallery-1"/>
         </div>
-        <div id="report2024" class="section">Отчёт за 2024 год...</div>
-        <div id="report2025" class="section">Отчёт за 2025 год...</div>
-        <div id="report2026" class="section">Отчёт за 2026 год...</div>
-        <div class="footer-bottom">
-            <div class="color-blocks">
-                <div class="color-block pink"></div>
-                <div class="color-block green"></div>
-                <div class="color-block blue"></div>
-                <div class="color-block pink"></div>
-                <div class="color-block green"></div>
-                <div class="color-block blue"></div>
-                <div class="color-block pink"></div>
-                <div class="color-block green"></div>
-                <div class="color-block blue"></div>
-                <div class="color-block pink"></div>
-                <div class="color-block green"></div>
-                <div class="color-block blue"></div>
-                <div class="color-block pink"></div>
-            </div>
-            <div class="social-icons">
-                <a href="https://t.me/morozkinaelena" target="_blank"><img src="images/telegram.png" alt="Телеграм"></a>
-                <a href="https://vk.com/creativetechnologyfund" target="_blank"><img src="images/vk.png" alt="ВКонтакте"></a>
-                <a href="https://rutube.ru/channel/56259363"><img src="images/rutube.png" alt="Rutube"></a>
-                <a href="https://dzen.ru/id/67d3207a928dec58ad1a04f5"><img src="images/dzen.png" alt="Дзен"></a>
-            </div>
+        <div class="gallery-item">
+          <img src="images/gallery2.jpg" alt="Фотография выставки 2" class="img-gallery-2"/>
         </div>
+      </div>
     </div>
+  </section>
+  
+  <!-- Верхняя секция (телефон и e-mail) -->
+  <section class="contacts-bar">
+    <div class="contacts-row">
+      <!-- Розовая фигура -->
+      <div class="contacts-item phone-item">
+        <!-- Иконка телефона (опционально) -->
+        <img src="images/phone-icon.png" alt="Телефон" class="contacts-icon">
+        <span>8 900 275 8888</span>
+      </div>
+      <!-- Синяя фигура -->
+      <div class="contacts-item email-item">
+        <span>e-mail: morozkinaelena@mail.ru</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Нижняя секция (Отчёты, 2024, 2025, 2026) -->
+  <section class="reports-bar">
+    <div class="reports-row">
+      <a class="report-item">ОТЧЁТЫ</a>
+      <a href="#" class="report-item modal-btn" data-title="Отчёт за 2024 год" data-text="Тут должен быть отчёт за 2024">2024</a>
+      <a href="#" class="report-item modal-btn" data-title="Отчёт за 2025 год" data-text="Тут должен быть отчёт за 2025">2025</a>
+      <a href="#" class="report-item modal-btn" data-title="Отчёт за 2026 год" data-text="Тут должен быть отчёт за 2026">2026</a>
+    </div>
+  </section>
+
+  <!-- Секция социальных сетей -->
+  <section class="social-section">
+    <div class="container social-container">
+      <!-- Блок с прямоугольниками -->
+      <div class="footer-rectangles">
+        <div class="footer-rectangle rect1"></div>
+        <div class="footer-rectangle rect2"></div>
+        <div class="footer-rectangle rect3"></div>
+        <div class="footer-rectangle rect1"></div>
+        <div class="footer-rectangle rect2"></div>
+        <div class="footer-rectangle rect3"></div>
+        <div class="footer-rectangle rect1"></div>
+        <div class="footer-rectangle rect2"></div>
+        <div class="footer-rectangle rect3"></div>
+	<div class="footer-rectangle rect1"></div>
+	<div class="footer-rectangle rect2"></div>
+        <!-- Если нужно больше прямоугольников, добавьте ещё -->
+      </div>
+      <div class="social-links">
+	<a href="https://t.me/morozkinaelena" target="_blank">
+          <img src="images/telegram.png">
+        </a>
+        <a href="https://vk.com/creativetechnologyfund" target="_blank">
+          <img src="images/vk.png">
+        </a>
+        <a href="https://rutube.ru/channel/56259363" target="_blank">
+          <img src="images/rutube.png">
+        </a>
+        <a href="https://dzen.ru/id/67d3207a928dec58ad1a04f5" target="_blank">
+          <img src="images/dzen.png">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modal-title">Заголовок</h2>
+      <p id="modal-text">Здесь будет текст для выбранной секции.</p>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
